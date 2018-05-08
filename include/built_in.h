@@ -1,6 +1,8 @@
 #ifndef BUILT_IN_H_
 #define BUILT_IN_H_
 
+int bgpid_num;
+char running[1024];
 typedef int (*built_in_command_do)(int, char**);
 typedef int (*built_in_command_validate)(int, char**);
 

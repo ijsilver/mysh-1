@@ -8,6 +8,8 @@
 
 #include "built_in.h"
 
+//int bgpid_num=1;
+char running[1024];
 int do_cd(int argc, char** argv) {
   if (!validate_cd_argv(argc, argv))
     return -1;
@@ -37,7 +39,10 @@ int do_fg(int argc, char** argv) {
     return -1;
 
   // TODO: Fill this.
-
+  int state;
+ // printf("\nbgpid_num=%d\n",bgpid_num);
+  waitpid(bgpid_num,&state,0);
+ // printf("waitpid complete\n");
   return 0;
 }
 
